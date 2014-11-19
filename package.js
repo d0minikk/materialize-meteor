@@ -7,11 +7,11 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
-  api.addFiles('d0minikk:materialize-meteor.js');
+  api.addFiles('materialize-meteor.js');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('d0minikk:materialize-meteor');
-  api.addFiles('d0minikk:materialize-meteor-tests.js');
+  api.use('materialize-meteor');
+  api.addFiles('materialize-meteor-tests.js');
 });
