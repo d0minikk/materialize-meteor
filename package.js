@@ -1,8 +1,8 @@
 Package.describe({
   name: 'd0minikk:materialize-meteor',
   summary: ' /* Fill me in! */ ',
-  version: '1.0.0',
-  git: ' /* Fill me in! */ '
+  version: '0.0.1',
+  git: 'https://github.com/d0minikk/materialize-meteor.git'
 });
 
 Package.onUse(function(api) {
