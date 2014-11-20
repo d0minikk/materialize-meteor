@@ -16,15 +16,15 @@ Package.onUse(function(api) {
   api.addFiles(path.join(asset_path, 'js', 'materialize.js'), 'client');
 
   // fonts
-  api.addFiles(path.join(asset_path, 'fonts/roboto', 'Roboto-Bold.ttf'), 'client');
-  api.addFiles(path.join(asset_path, 'fonts/roboto', 'Roboto-Light.ttf'), 'client');
-  api.addFiles(path.join(asset_path, 'fonts/roboto', 'Roboto-Medium.ttf'), 'client');
-  api.addFiles(path.join(asset_path, 'fonts/roboto', 'Roboto-Regular.ttf'), 'client');
-  api.addFiles(path.join(asset_path, 'fonts/roboto', 'Roboto-Thin.ttf'), 'client');
+  api.addFiles(path.join(asset_path, 'font/roboto', 'Roboto-Bold.ttf'), 'client');
+  api.addFiles(path.join(asset_path, 'font/roboto', 'Roboto-Light.ttf'), 'client');
+  api.addFiles(path.join(asset_path, 'font/roboto', 'Roboto-Medium.ttf'), 'client');
+  api.addFiles(path.join(asset_path, 'font/roboto', 'Roboto-Regular.ttf'), 'client');
+  api.addFiles(path.join(asset_path, 'font/roboto', 'Roboto-Thin.ttf'), 'client');
 
-  api.addFiles(path.join(asset_path, 'fonts/material-design-icons', 'Material-Design-Icons.eot'), 'client');
-  api.addFiles(path.join(asset_path, 'fonts/material-design-icons', 'Material-Design-Icons.svg'), 'client');
-  api.addFiles(path.join(asset_path, 'fonts/material-design-icons', 'Material-Design-Icons.ttf'), 'client');
-  api.addFiles(path.join(asset_path, 'fonts/material-design-icons', 'Material-Design-Icons.woff'), 'client');
+  api.addFiles(path.join(asset_path, 'font/material-design-icons', 'Material-Design-Icons.eot'), 'client');
+  api.addFiles(path.join(asset_path, 'font/material-design-icons', 'Material-Design-Icons.svg'), 'client');
+  api.addFiles(path.join(asset_path, 'font/material-design-icons', 'Material-Design-Icons.ttf'), 'client');
+  api.addFiles(path.join(asset_path, 'font/material-design-icons', 'Material-Design-Icons.woff'), 'client');
 
 });
