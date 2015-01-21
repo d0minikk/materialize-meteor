@@ -1,7 +1,7 @@
 Package.describe({
   name: 'd0minikk:materialize-meteor',
   summary: 'A modern responsive front-end framework based on Material Design',
-  version: '1.94.2',
+  version: '1.95.0',
   git: 'https://github.com/d0minikk/materialize-meteor.git'
 });
 
