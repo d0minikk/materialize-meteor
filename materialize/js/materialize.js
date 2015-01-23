@@ -1,5 +1,5 @@
 /*!
- * Materialize v0.94.2 (http://materializecss.com)
+ * Materialize v0.95.0 (http://materializecss.com)
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
@@ -10,33 +10,33 @@
  * to offer multiple easing options
  *
  * TERMS OF USE - jQuery Easing
- *
- * Open source under the BSD License.
- *
+ * 
+ * Open source under the BSD License. 
+ * 
  * Copyright © 2008 George McGinley Smith
  * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification,
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, 
  * are permitted provided that the following conditions are met:
- *
- * Redistributions of source code must retain the above copyright notice, this list of
+ * 
+ * Redistributions of source code must retain the above copyright notice, this list of 
  * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list
- * of conditions and the following disclaimer in the documentation and/or other materials
+ * Redistributions in binary form must reproduce the above copyright notice, this list 
+ * of conditions and the following disclaimer in the documentation and/or other materials 
  * provided with the distribution.
- *
- * Neither the name of the author nor the names of contributors may be used to endorse
+ * 
+ * Neither the name of the author nor the names of contributors may be used to endorse 
  * or promote products derived from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
  * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
  *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
  *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
  * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
- * OF THE POSSIBILITY OF SUCH DAMAGE.
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+ * OF THE POSSIBILITY OF SUCH DAMAGE. 
  *
 */
 
@@ -152,7 +152,7 @@ jQuery.extend( jQuery.easing,
 		return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
 	},
 	easeInOutBack: function (x, t, b, c, d, s) {
-		if (s == undefined) s = 1.70158;
+		if (s == undefined) s = 1.70158; 
 		if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
 		return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
 	},
@@ -179,33 +179,33 @@ jQuery.extend( jQuery.easing,
 /*
  *
  * TERMS OF USE - EASING EQUATIONS
- *
- * Open source under the BSD License.
- *
+ * 
+ * Open source under the BSD License. 
+ * 
  * Copyright © 2001 Robert Penner
  * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification,
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, 
  * are permitted provided that the following conditions are met:
- *
- * Redistributions of source code must retain the above copyright notice, this list of
+ * 
+ * Redistributions of source code must retain the above copyright notice, this list of 
  * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list
- * of conditions and the following disclaimer in the documentation and/or other materials
+ * Redistributions in binary form must reproduce the above copyright notice, this list 
+ * of conditions and the following disclaimer in the documentation and/or other materials 
  * provided with the distribution.
- *
- * Neither the name of the author nor the names of contributors may be used to endorse
+ * 
+ * Neither the name of the author nor the names of contributors may be used to endorse 
  * or promote products derived from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
  * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
  *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
  *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
  * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
- * OF THE POSSIBILITY OF SUCH DAMAGE.
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+ * OF THE POSSIBILITY OF SUCH DAMAGE. 
  *
  */;/*! VelocityJS.org (1.1.0). (C) 2014 Julian Shapiro. MIT @license: en.wikipedia.org/wiki/MIT_License */
 /*! VelocityJS.org jQuery Shim (1.0.1). (C) 2014 The jQuery Foundation. MIT @license: en.wikipedia.org/wiki/MIT_License. */
@@ -347,8 +347,8 @@ jQuery.extend( jQuery.easing,
           display: 'block',
           position: 'fixed',
           height: 0,
-          top: origin.position().top,
-          left:origin.position().left
+          top: origin.offset().top - $(window).scrollTop(),
+          left: origin.offset().left
         });
       }
       else {
@@ -615,7 +615,7 @@ jQuery.extend( jQuery.easing,
 
         // Add and animate caption if it exists
         if (origin.data('caption') !== "") {
-          var $photo_caption = $('<div class="materialbox-caption"></div');
+          var $photo_caption = $('<div class="materialbox-caption"></div>');
           $photo_caption.text(origin.data('caption'));
           $('body').append($photo_caption);
           $photo_caption.css({ "display": "inline" });
@@ -790,9 +790,9 @@ jQuery.extend( jQuery.easing,
             var windowHeight = window.innerHeight;
             var windowBottom = scrollTop + windowHeight;
             var percentScrolled = (windowBottom - top) / (container_height + windowHeight);
-            var parallax = -1 * parallax_dist * percentScrolled;
+            var parallax = -1 * parallax_dist * percentScrolled;      
 
-            if ((bottom > scrollTop) && (top < (scrollTop + windowHeight))) {
+            if ((bottom > scrollTop) && (top < (scrollTop + windowHeight))) { 
               $this.children("img").first().css('bottom', parallax + "px");
             }
             if (initial) {
@@ -805,7 +805,7 @@ jQuery.extend( jQuery.easing,
           }
         }
         updateParallax(true);
-
+        
         $(window).scroll(function() {
           window_width = $(window).width();
           updateParallax(false);
@@ -938,18 +938,18 @@ jQuery.extend( jQuery.easing,
       // Defaults
       var defaults = {
         delay: 350
-      }
+      };
       options = $.extend(defaults, options);
 
       return this.each(function(){
         var origin = $(this);
 
       // Create tooltip
-      var newTooltip = $('<div></div');
+      var newTooltip = $('<div></div>');
       newTooltip.addClass('material-tooltip').text(origin.attr('data-tooltip'));
       newTooltip.appendTo($('body'));
 
-      var backdrop = $('<div></div').addClass('backdrop');
+      var backdrop = $('<div></div>').addClass('backdrop');
       backdrop.appendTo(newTooltip);
       backdrop.css({ top: 0, left:0 });
 
@@ -961,7 +961,7 @@ jQuery.extend( jQuery.easing,
         counterInterval = setInterval(function(){
           counter += 50;
           if (counter >= defaults.delay && started == false) {
-            started = true
+            started = true;
             newTooltip.css({ display: 'block', left: '0px', top: '0px' });
 
             // Tooltip positioning
@@ -1029,9 +1029,9 @@ jQuery.extend( jQuery.easing,
                 top: origin.offset().top + origin.outerHeight() + margin,
                 left: origin.offset().left + originWidth/2 - tooltipWidth/2
               });
-              console.log(origin.offset().left)
-              console.log(originWidth/2)
-              console.log(tooltipWidth/2)
+              //console.log(origin.offset().left)
+              //console.log(originWidth/2)
+              //console.log(tooltipWidth/2)
               tooltipVerticalMovement = '+10px';
               backdrop.css({
                 marginLeft: (tooltipWidth/2) - (backdrop.width()/2)
@@ -1078,9 +1078,8 @@ jQuery.extend( jQuery.easing,
       });
     });
   }
-}( jQuery ));;
-/*!
- * Waves v0.5.3
+}( jQuery ));;/*!
+ * Waves v0.6.0
  * http://fian.my.id/Waves
  *
  * Copyright 2014 Alfiana E. Sibuea and other contributors
@@ -1104,7 +1103,6 @@ jQuery.extend( jQuery.easing,
     }
 
     function offset(elem) {
-
         var docElem, win,
             box = {top: 0, left: 0},
             doc = elem && elem.ownerDocument;
@@ -1122,7 +1120,6 @@ jQuery.extend( jQuery.easing,
     }
 
     function convertStyle(obj) {
-
         var style = '';
 
         for (var a in obj) {
@@ -1137,16 +1134,16 @@ jQuery.extend( jQuery.easing,
     var Effect = {
 
         // Effect delay
-        duration: 700,
+        duration: 750,
 
-        show: function(e) {
+        show: function(e, element) {
 
             // Disable right click
             if (e.button === 2) {
-              return false;
+                return false;
             }
 
-            var el = this;
+            var el = element || this;
 
             // Create ripple
             var ripple = document.createElement('div');
@@ -1157,7 +1154,7 @@ jQuery.extend( jQuery.easing,
             var pos         = offset(el);
             var relativeY   = (e.pageY - pos.top);
             var relativeX   = (e.pageX - pos.left);
-            var scale       = 'scale('+((el.clientWidth / 100) * 22)+')';
+            var scale       = 'scale('+((el.clientWidth / 100) * 10)+')';
 
             // Support for touch devices
             if ('touches' in e) {
@@ -1189,10 +1186,10 @@ jQuery.extend( jQuery.easing,
             rippleStyle.transform = scale;
             rippleStyle.opacity   = '1';
 
-            rippleStyle['-webkit-transition-duration'] = 'cubic-bezier(0.215, 0.610, 0.355, 1.000)';
-            rippleStyle['-moz-transition-duration']    = 'cubic-bezier(0.215, 0.610, 0.355, 1.000)';
-            rippleStyle['-o-transition-duration']      = 'cubic-bezier(0.215, 0.610, 0.355, 1.000)';
-            rippleStyle['transition-duration']         = 'cubic-bezier(0.215, 0.610, 0.355, 1.000)';
+            rippleStyle['-webkit-transition-duration'] = Effect.duration + 'ms';
+            rippleStyle['-moz-transition-duration']    = Effect.duration + 'ms';
+            rippleStyle['-o-transition-duration']      = Effect.duration + 'ms';
+            rippleStyle['transition-duration']         = Effect.duration + 'ms';
 
             rippleStyle['-webkit-transition-timing-function'] = 'cubic-bezier(0.215, 0.610, 0.355, 1.000)';
             rippleStyle['-moz-transition-timing-function']    = 'cubic-bezier(0.215, 0.610, 0.355, 1.000)';
@@ -1200,28 +1197,20 @@ jQuery.extend( jQuery.easing,
             rippleStyle['transition-timing-function']         = 'cubic-bezier(0.215, 0.610, 0.355, 1.000)';
 
             ripple.setAttribute('style', convertStyle(rippleStyle));
-
         },
 
-        hide: function() {
+        hide: function(e) {
+            TouchHandler.touchup(e);
 
             var el = this;
-
             var width = el.clientWidth * 1.4;
 
             // Get first ripple
             var ripple = null;
-
-            var childrenLength = el.children.length;
-
-            for (var a = 0; a < childrenLength; a++) {
-                if (el.children[a].className.indexOf('waves-ripple') !== -1) {
-                    ripple = el.children[a];
-                    continue;
-                }
-            }
-
-            if (!ripple) {
+            var ripples = el.getElementsByClassName('waves-ripple');
+            if (ripples.length > 0) {
+                ripple = ripples[ripples.length - 1];
+            } else {
                 return false;
             }
 
@@ -1231,7 +1220,7 @@ jQuery.extend( jQuery.easing,
 
             // Get delay beetween mousedown and mouse leave
             var diff = Date.now() - Number(ripple.getAttribute('data-hold'));
-            var delay = 500 - diff;
+            var delay = 350 - diff;
 
             if (delay < 0) {
                 delay = 0;
@@ -1239,7 +1228,6 @@ jQuery.extend( jQuery.easing,
 
             // Fade out ripple after delay
             setTimeout(function() {
-
                 var style = {
                     'top': relativeY+'px',
                     'left': relativeX+'px',
@@ -1260,34 +1248,26 @@ jQuery.extend( jQuery.easing,
                 ripple.setAttribute('style', convertStyle(style));
 
                 setTimeout(function() {
-
                     try {
                         el.removeChild(ripple);
                     } catch(e) {
                         return false;
                     }
-
-
                 }, Effect.duration);
-
             }, delay);
-
         },
 
         // Little hack to make <input> can perform waves effect
         wrapInput: function(elements) {
-
             for (var a = 0; a < elements.length; a++) {
-
                 var el = elements[a];
 
                 if (el.tagName.toLowerCase() === 'input') {
-
                     var parent = el.parentNode;
 
                     // If input already have parent just pass through
                     if (parent.tagName.toLowerCase() === 'i' && parent.className.indexOf('waves-effect') !== -1) {
-                        return false;
+                        continue;
                     }
 
                     // Put element class and style to the specified parent
@@ -1308,15 +1288,87 @@ jQuery.extend( jQuery.easing,
                     // Put element as child
                     parent.replaceChild(wrapper, el);
                     wrapper.appendChild(el);
-
                 }
-
             }
         }
     };
 
-    Waves.displayEffect = function(options) {
 
+    /**
+     * Disable mousedown event for 500ms during and after touch
+     */
+    var TouchHandler = {
+        /* uses an integer rather than bool so there's no issues with
+         * needing to clear timeouts if another touch event occurred
+         * within the 500ms. Cannot mouseup between touchstart and
+         * touchend, nor in the 500ms after touchend. */
+        touches: 0,
+        allowEvent: function(e) {
+            var allow = true;
+
+            if (e.type === 'touchstart') {
+                TouchHandler.touches += 1; //push
+            } else if (e.type === 'touchend' || e.type === 'touchcancel') {
+                setTimeout(function() {
+                    if (TouchHandler.touches > 0) {
+                        TouchHandler.touches -= 1; //pop after 500ms
+                    }
+                }, 500);
+            } else if (e.type === 'mousedown' && TouchHandler.touches > 0) {
+                allow = false;
+            }
+
+            return allow;
+        },
+        touchup: function(e) {
+            TouchHandler.allowEvent(e);
+        }
+    };
+
+
+    /**
+     * Delegated click handler for .waves-effect element.
+     * returns null when .waves-effect element not in "click tree"
+     */
+    function getWavesEffectElement(e) {
+        if (TouchHandler.allowEvent(e) === false) {
+            return null;
+        }
+
+        var element = null;
+        var target = e.target || e.srcElement;
+
+        while (target.parentElement !== null) {
+            if (target.className.indexOf('waves-effect') !== -1) {
+                element = target;
+                break;
+            }
+            target = target.parentElement;
+        }
+
+        return element;
+    }
+
+    /**
+     * Bubble the click and show effect if .waves-effect elem was found
+     */
+    function showEffect(e) {
+        var element = getWavesEffectElement(e);
+
+        if (element !== null) {
+            Effect.show(e, element);
+
+            if ('ontouchstart' in window) {
+                element.addEventListener('touchend', Effect.hide, false);
+                element.addEventListener('touchcancel', Effect.hide, false);
+            }
+
+            element.addEventListener('mouseup', Effect.hide, false);
+            element.addEventListener('mouseleave', Effect.hide, false);
+        }
+    }
+
+    Waves.displayEffect = function(options) {
         options = options || {};
 
         if ('duration' in options) {
@@ -1326,29 +1378,39 @@ jQuery.extend( jQuery.easing,
         //Wrap input inside <i> tag
         Effect.wrapInput($$('.waves-effect'));
 
-        Array.prototype.forEach.call($$('.waves-effect'), function(i) {
-
         if ('ontouchstart' in window) {
-          i.addEventListener('mouseup', Effect.hide, false);                      i.addEventListener('touchstart', Effect.show, false);
-          i.addEventListener('mouseleave', Effect.hide, false);                   i.addEventListener('touchend',   Effect.hide, false);
-          i.addEventListener('touchcancel',   Effect.hide, false);
+            document.body.addEventListener('touchstart', showEffect, false);
         }
 
-        i.addEventListener('mousedown', Effect.show, false);
-        i.addEventListener('mouseup', Effect.hide, false);
-        i.addEventListener('mouseleave', Effect.hide, false);
+        document.body.addEventListener('mousedown', showEffect, false);
+    };
 
+    /**
+     * Attach Waves to an input element (or any element which doesn't
+     * bubble mouseup/mousedown events).
+     *   Intended to be used with dynamically loaded forms/inputs, or
+     * where the user doesn't want a delegated click handler.
+     */
+    Waves.attach = function(element) {
+        //FUTURE: automatically add waves classes and allow users
+        // to specify them with an options param? Eg. light/classic/button
+        if (element.tagName.toLowerCase() === 'input') {
+            Effect.wrapInput([element]);
+            element = element.parentElement;
+        }
 
-        });
+        if ('ontouchstart' in window) {
+            element.addEventListener('touchstart', showEffect, false);
+        }
 
+        element.addEventListener('mousedown', showEffect, false);
     };
 
     window.Waves = Waves;
+    $(document).ready(function(){
+        Waves.displayEffect();
 
-    $(document).ready(function() {
-      Waves.displayEffect();
-    });
-
+    })
 })(window);;function toast(message, displayLength, className, completeCallback) {
     className = className || "";
     if ($('#toast-container').length == 0) {
@@ -1447,42 +1509,45 @@ jQuery.extend( jQuery.easing,
 };(function ($) {
     // left: 37, up: 38, right: 39, down: 40,
     // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-    var keys = [32, 33, 34, 35, 36, 37, 38, 39, 40];
+    // var keys = [32, 33, 34, 35, 36, 37, 38, 39, 40];
 
-    function preventDefault(e) {
-      e = e || window.event;
-      if (e.preventDefault)
-        e.preventDefault();
-      e.returnValue = false;
-    }
+    // function preventDefault(e) {
+    //   e = e || window.event;
+    //   if (e.preventDefault)
+    //     e.preventDefault();
+    //   e.returnValue = false;
+    // }
 
-    function keydown(e) {
-      for (var i = keys.length; i--;) {
-        if (e.keyCode === keys[i]) {
-          preventDefault(e);
-          return;
-        }
-      }
-    }
+    // function keydown(e) {
+    //   for (var i = keys.length; i--;) {
+    //     if (e.keyCode === keys[i]) {
+    //       preventDefault(e);
+    //       return;
+    //     }
+    //   }
+    // }
 
-    function wheel(e) {
-      preventDefault(e);
-    }
+    // function wheel(e) {
+    //   preventDefault(e);
+    // }
 
-    function disable_scroll() {
-      if (window.addEventListener) {
-        window.addEventListener('DOMMouseScroll', wheel, false);
-      }
-      window.onmousewheel = document.onmousewheel = wheel;
-      document.onkeydown = keydown;
-    }
+    // function disable_scroll() {
+    //   if (window.addEventListener) {
+    //     window.addEventListener('DOMMouseScroll', wheel, false);
+    //   }
+    //   window.onmousewheel = document.onmousewheel = wheel;
+    //   document.onkeydown = keydown;
+    //   $('body').css({'overflow-y' : 'hidden'});
+    // }
 
-    function enable_scroll() {
-      if (window.removeEventListener) {
-        window.removeEventListener('DOMMouseScroll', wheel, false);
-      }
-      window.onmousewheel = document.onmousewheel = document.onkeydown = null;
-    }
+    // function enable_scroll() {
+    //   if (window.removeEventListener) {
+    //     window.removeEventListener('DOMMouseScroll', wheel, false);
+    //   }
+    //   window.onmousewheel = document.onmousewheel = document.onkeydown = null;
+    //   $('body').css({'overflow-y' : ''});
+
+    // }
 
     $.fn.sideNav = function (options) {
       var defaults = {
@@ -1494,10 +1559,20 @@ jQuery.extend( jQuery.easing,
       $(this).each(function(){
         var $this = $(this);
         var menu_id = $("#"+ $this.attr('data-activates'));
-        var menuWidth = menu_id.width();
+        var menuWidth = 240;
 
+        // Add alignment
         if (options.edge != 'left') {
           menu_id.addClass('right-aligned');
+        }
+
+        // Add Touch Area
+        $('body').append($('<div class="drag-target"></div>'));
+        if (options.edge === 'left') {
+          $('.drag-target').css({'left': 0})
+        }
+        else {
+          $('.drag-target').css({'right': 0})
         }
 
         // Window resize to reset on large screens fixed
@@ -1512,26 +1587,37 @@ jQuery.extend( jQuery.easing,
         }
 
         function removeMenu() {
-          $('#sidenav-overlay').animate({opacity: 0}, {duration: 300, queue: false, easing: 'easeOutQuad',
+          panning = false;
+          menuOut = false;
+          $('#sidenav-overlay').animate({opacity: 0}, {duration: 200, queue: false, easing: 'easeOutQuad',
             complete: function() {
               $(this).remove();
             } });
           if (options.edge === 'left') {
-
-            menu_id.velocity({left: -1 * (menuWidth + 10)}, {duration: 300, queue: false, easing: 'easeOutQuad'});
+            // Reset phantom div
+            $('.drag-target').css({width: '', right: '', left: '0'});
+            menu_id.velocity({left: -1 * (menuWidth + 10)}, {duration: 200, queue: false, easing: 'easeOutCubic'});
           }
           else {
-            menu_id.velocity({right: -1 * (menuWidth + 10)}, {duration: 300, queue: false, easing: 'easeOutQuad'});
+            // Reset phantom div
+            $('.drag-target').css({width: '', right: '0', left: ''});
+            menu_id.velocity({right: -1 * (menuWidth + 10)}, {duration: 200, queue: false, easing: 'easeOutCubic'});
           }
-          enable_scroll();
+
+          // enable_scroll();
         }
 
         // Touch Event
         var panning = false;
         var menuOut = false;
 
-        $('nothing').hammer({
+        $('.drag-target').hammer({
           prevent_default: false
+        }).bind('tap', function(e) {
+          // capture overlay click on drag target
+          if (menuOut && !panning) {
+            $('#sidenav-overlay').trigger('click');
+          }
         }).bind('pan', function(e) {
 
           if (e.gesture.pointerType === "touch") {
@@ -1539,79 +1625,93 @@ jQuery.extend( jQuery.easing,
             var direction = e.gesture.direction;
             var x = e.gesture.center.x;
             var y = e.gesture.center.y;
+            var velocityX = e.gesture.velocityX;
 
-            if (panning) {
-              if (!$('#sidenav-overlay').length) {
-                var overlay = $('<div id="sidenav-overlay"></div>');
-                overlay.css('opacity', 0)
-                .click(function(){
-                  panning = false;
-                  menuOut = false;
-                  removeMenu();
+            if (!$('#sidenav-overlay').length) {
+              var overlay = $('<div id="sidenav-overlay"></div>');
+              overlay.css('opacity', 0).click(function(){ removeMenu(); });
+              $('body').append(overlay);
+            }
 
-                  if (options.edge === 'left') {
-                    menu_id.velocity({left: -1 * menuWidth}, {duration: 300, queue: false, easing: 'easeOutQuad'});
-                  }
-                  else {
-                    menu_id.velocity({right: -1 * menuWidth}, {duration: 300, queue: false, easing: 'easeOutQuad'});
-                  }
-                  overlay.animate({opacity: 0}, {duration: 300, queue: false, easing: 'easeOutQuad',
-                    complete: function() {
-                      $(this).remove();
-                    } });
-
-
-                });
-                $('body').append(overlay);
-              }
-
-
+            // Keep within boundaries
+            if (options.edge === 'left') {
               if (x > menuWidth) { x = menuWidth; }
               else if (x < 0) { x = 0; }
-              else if (x < (menuWidth / 2)) { menuOut = false; }
-              else if (x >= (menuWidth / 2)) { menuOut = true; }
-
-              if (options.edge === 'left') {
-                menu_id.velocity({left: (-1 * menuWidth) + x}, {duration: 50, queue: false, easing: 'easeOutQuad'});
-              }
-              else {
-                menu_id.velocity({right: (-1 * menuWidth) + x}, {duration: 50, queue: false, easing: 'easeOutQuad'});
-              }
-
-                // Percentage overlay
-                var overlayPerc = x / menuWidth;
-                $('#sidenav-overlay').velocity({opacity: overlayPerc }, {duration: 50, queue: false, easing: 'easeOutQuad'});
-              }
-              else {
-                if (menuOut) {
-                  if ((e.gesture.center.x > (menuWidth - options.activationWidth)) && direction === 2) {
-                    panning = true;
-                  }
-                }
-                else {
-                  if ((e.gesture.center.x < options.activationWidth) && direction === 4) {
-                    panning = true;
-                  }
-                }
-              }
             }
-          }).bind('panend', function(e) {
-            if (e.gesture.pointerType === "touch") {
+            else {
+              if (x < $(window).width() - menuWidth) { x = $(window).width() - menuWidth; }
+            }
 
-              panning = false;
-              if (menuOut) {
+            if (options.edge === 'left') {
+              // Left Direction
+              if (x < (menuWidth / 2)) { menuOut = false; }
+              // Right Direction
+              else if (x >= (menuWidth / 2)) { menuOut = true; }
+            }
+            else {
+              // Left Direction
+              if (x < ($(window).width() - menuWidth / 2)) { menuOut = true; }
+              // Right Direction
+              else if (x >= ($(window).width() - menuWidth / 2)) { menuOut = false; }
+            }
+
+
+            if (options.edge === 'left') {
+              menu_id.css('left', (x - menuWidth));
+            }
+            else {
+              menu_id.css('right', -1 *(x - menuWidth / 2));
+            }
+
+            // Percentage overlay
+            if (options.edge === 'left') {
+              var overlayPerc = x / menuWidth;
+              $('#sidenav-overlay').velocity({opacity: overlayPerc }, {duration: 50, queue: false, easing: 'easeOutQuad'});
+            }
+            else {
+              var overlayPerc = Math.abs((x - $(window).width()) / menuWidth);
+              $('#sidenav-overlay').velocity({opacity: overlayPerc }, {duration: 50, queue: false, easing: 'easeOutQuad'});
+            }
+          }
+        }).bind('panend', function(e) {
+          if (e.gesture.pointerType === "touch") {
+            var velocityX = e.gesture.velocityX;
+            panning = false;
+
+            if (options.edge === 'left') {
+              if (menuOut || velocityX < -0.5) {
                 menu_id.velocity({left: 0}, {duration: 300, queue: false, easing: 'easeOutQuad'});
                 $('#sidenav-overlay').velocity({opacity: 1 }, {duration: 50, queue: false, easing: 'easeOutQuad'});
+                $('.drag-target').css({width: '50%', right: 0, left: ''});
               }
-              else {
+              else if (!menuOut || velocityX > 0.3) {
                 menu_id.velocity({left: -240}, {duration: 300, queue: false, easing: 'easeOutQuad'});
                 $('#sidenav-overlay').velocity({opacity: 0 }, {duration: 50, queue: false, easing: 'easeOutQuad',
                   complete: function () {
                     $(this).remove();
                   }});
+                $('.drag-target').css({width: '10%', right: '', left: 0});
               }
             }
-          });
+            else {
+              if (menuOut || velocityX > 0.5) {
+                menu_id.velocity({right: 0}, {duration: 300, queue: false, easing: 'easeOutQuad'});
+                $('#sidenav-overlay').velocity({opacity: 1 }, {duration: 50, queue: false, easing: 'easeOutQuad'});
+                $('.drag-target').css({width: '50%', right: '', left: 0});
+              }
+              else if (!menuOut || velocityX < -0.3) {
+                menu_id.velocity({right: -240}, {duration: 300, queue: false, easing: 'easeOutQuad'});
+                $('#sidenav-overlay').velocity({opacity: 0 }, {duration: 50, queue: false, easing: 'easeOutQuad',
+                  complete: function () {
+                    $(this).remove();
+                  }});
+                $('.drag-target').css({width: '10%', right: 0, left: ''});
+              }
+            }
+
+
+          }
+        });
 
           $this.click(function() {
             if (menu_id.hasClass('active')) {
@@ -1620,11 +1720,14 @@ jQuery.extend( jQuery.easing,
               removeMenu();
             }
             else {
-              disable_scroll();
+              // disable_scroll();
+
               if (options.edge === 'left') {
+                $('.drag-target').css({width: '50%', right: 0, left: ''});
                 menu_id.velocity({left: 0}, {duration: 300, queue: false, easing: 'easeOutQuad'});
               }
               else {
+                $('.drag-target').css({width: '50%', right: '', left: 0});
                 menu_id.velocity({right: 0}, {duration: 300, queue: false, easing: 'easeOutQuad'});
               }
 
@@ -1944,20 +2047,43 @@ jQuery.extend( jQuery.easing,
   $(document).ready(function() {
 
     // Text based inputs
-    var input_selector = 'input[type=text], input[type=password], input[type=email], textarea';
+    var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number], textarea';
 
-    $(input_selector).each(function(){
+    // Add active if form auto complete
+    $(document).on('change', input_selector, function () {
       if($(this).val().length !== 0) {
        $(this).siblings('label, i').addClass('active');
       }
-    })
+    });
 
+    // Add active if input element has been pre-populated on document ready
+    $(document).ready(function() {
+      $(input_selector).each(function(index, element) {
+        if($(element).val().length > 0) {
+          $(this).siblings('label, i').addClass('active');
+        }
+      });
+    });
+
+    // HTML DOM FORM RESET handling
+    $(document).on('reset', function(e) {
+      if ($(e.target).is('form')) {
+        $(this).find(input_selector).removeClass('valid').removeClass('invalid');
+
+        // Reset select
+        $(this).find('select.initialized').each(function () {
+          var reset_text = $(this).find('option[selected]').text();
+          $(this).prev('span.select-dropdown').html(reset_text);
+        });
+      }
+    });
+
+    // Add active when element has focus
     $(document).on('focus', input_selector, function () {
       $(this).siblings('label, i').addClass('active');
     });
 
     $(document).on('blur', input_selector, function () {
-      console.log($(this).is(':valid'));
       if ($(this).val().length === 0) {
         $(this).siblings('label, i').removeClass('active');
 
@@ -2080,7 +2206,7 @@ jQuery.extend( jQuery.easing,
     //  Select Functionality
 
     // Select Plugin
-    $.fn.material_select = function () {
+    $.fn.material_select = function (callback) {
       $(this).each(function(){
         $select = $(this);
         if ( $select.hasClass('browser-default') || $select.hasClass('initialized')) {
@@ -2113,10 +2239,9 @@ jQuery.extend( jQuery.easing,
             if (!$(this).hasClass('disabled')) {
               $curr_select.find('option').eq(i).prop('selected', true);
               // Trigger onchange() event
-              if (typeof($curr_select.context.onchange) === "function") {
-                $curr_select[0].onchange();
-              }
+              $curr_select.trigger('change');
               $curr_select.prev('span.select-dropdown').html($(this).text());
+              if (typeof callback !== 'undefined') callback();
             }
           });
 
@@ -2227,12 +2352,23 @@ jQuery.extend( jQuery.easing,
       }
 
       // Set height of slider
-      $this.height(options.height + 40);
-      $slider.height(options.height);
+      if (options.height != 400) {
+        $this.height(options.height + 40);
+        $slider.height(options.height);
+      }
 
       // Set initial positions of captions
       $slides.find('.caption').each(function () {
         captionTransition($(this), 0);
+      });
+
+      // Set initial dimensions of images
+      $slides.find('img').each(function () {
+        $(this).load(function () {
+          if ($(this).width() < $(this).parent().width()) {
+            $(this).css({width: '100%', height: 'auto'});
+          }
+        });
       });
 
       // dynamically add indicators
@@ -2407,9 +2543,8 @@ jQuery.extend( jQuery.easing,
         if ($(e.target).is($('.card-reveal .card-title')) || $(e.target).is($('.card-reveal .card-title i'))) {
           $(this).find('.card-reveal').velocity({translateY: 0}, {duration: 300, queue: false, easing: 'easeOutQuad'});
         }
-        else if ($(e.target).is($('.card .card-title')) ||
-                 $(e.target).is($('.card .card-title i')) ||
-                 $(e.target).is($('.card .card-image')) ) {
+        else if ($(e.target).is($('.card .activator')) ||
+                 $(e.target).is($('.card .activator i')) ) {
           $(this).find('.card-reveal').velocity({translateY: '-100%'}, {duration: 300, queue: false, easing: 'easeOutQuad'});
         }
       }
@@ -2486,7 +2621,7 @@ jQuery.extend( jQuery.easing,
         }
 
 
-
+        
         updateElements($this, $(window).scrollTop());
         $(window).on('scroll.' + $uniqueId, function () {
           var $scrolled = $(window).scrollTop() + options.offset;
@@ -2494,14 +2629,14 @@ jQuery.extend( jQuery.easing,
           updateElements($this, $scrolled);
         });
 
-      });
+      }); 
 
 
 
     };
 
-
-
+  
+  
 
   });
 }( jQuery ));;/*!
@@ -5052,4 +5187,5 @@ Picker.extend( 'pickadate', DatePicker )
 
 
 }));
+
 
